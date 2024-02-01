@@ -13,7 +13,23 @@ public class ClockControl : UserControl
 
     private void InitializeComponents()
     {
+        label1 = new Label();
+        label1.Font = new Font("Arial", 24, FontStyle.Bold);
+        this.BorderStyle = BorderStyle.FixedSingle; 
+        label1.BorderStyle = BorderStyle.None;
+        label1.Dock = DockStyle.Fill;
         this.Controls.Add(label1);
+    }
+
+    private void InitializeComponent()
+    {
+        SuspendLayout();
+        // 
+        // ClockControl
+        // 
+        Name = "ClockControl";
+        Size = new Size(700, 700);
+        ResumeLayout(false);
     }
 
     private void UpdateClock()
@@ -21,7 +37,7 @@ public class ClockControl : UserControl
         // Update the label with the current time
         label1.Text = DateTime.Now.ToString("HH:mm:ss");
 
-        // If you want to update the time every second, you can use a Timer
+        
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         timer.Interval = 1000; // 1 second
         timer.Tick += (sender, e) =>

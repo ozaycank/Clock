@@ -19,16 +19,21 @@
 
         private void InitializeComponent()
         {
-            SuspendLayout();
-
-            // Instantiate your custom ClockControl
             clockControl1 = new ClockControl();
-
-            // Add the ClockControl to the form's controls
+            SuspendLayout();
+            // 
+            // clockControl1
+            // 
+            clockControl1.Location = new Point(50, 50);
+            clockControl1.Name = "clockControl1";
+            clockControl1.Size = new Size(230, 110);
+            clockControl1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            ClientSize = new Size(350, 250);
             Controls.Add(clockControl1);
-
-            // Other auto-generated code...
-
+            Name = "Form1";
             ResumeLayout(false);
         }
 
