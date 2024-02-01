@@ -2,15 +2,10 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
+        private ClockControl clockControl1; // Add this line
+
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,22 +17,18 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             SuspendLayout();
-            // 
-            // Form1
-            // 
-            AllowDrop = true;
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(551, 367);
-            Name = "Form1";
-            Text = "Form1";
+
+            // Instantiate your custom ClockControl
+            clockControl1 = new ClockControl();
+
+            // Add the ClockControl to the form's controls
+            Controls.Add(clockControl1);
+
+            // Other auto-generated code...
+
             ResumeLayout(false);
         }
 
